@@ -3,7 +3,7 @@ const { userhistoryschema } = require('./userhistory');
 const {userschema}=require('./userschema')
 
 // mongodb://localhost:27017/expensetracker
-mongoose.connect('mongodb://localhost:27017/expensetracker')
+mongoose.connect(process.env.MONGO_URL)
 .then(function(db){
   console.log("db is connected");
 })
